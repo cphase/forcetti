@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cupea0fpohjbx"]
+
+[ext_resource type="Script" path="res://Card.gd" id="1_i1r31"]
+
+[node name="Card" type="Node2D"]
+script = ExtResource("1_i1r31")
+
+[node name="CardPanel" type="Panel" parent="."]
+offset_right = 117.0
+offset_bottom = 169.0
+
+[node name="CardLabel" type="Label" parent="CardPanel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
