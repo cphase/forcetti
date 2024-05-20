@@ -2,7 +2,7 @@ extends Node2D
 
 enum {SUIT_SPADES = 0, SUIT_HEARTS = 1, SUIT_DIAMONDS = 2, SUIT_CLUBS = 3}
 
-@export var rank = 1
+@export var rank: Enums.Ranks = Enums.Ranks.ACE
 @export var suit: Enums.Suits = Enums.Suits.SPADES
 
 
