@@ -19,3 +19,9 @@ func _process(delta):
 
 func updateCard():
 	get_node("CardButton").text = str(Enums.Ranks.find_key(rank), "\nof\n", Enums.Suits.keys()[suit])
+
+func _on_card_button_toggled(toggled_on):
+	if toggled_on:
+		set_position(get_position() + Vector2(0,40))
+	else:
+		set_position(get_position() + Vector2(0,-40))

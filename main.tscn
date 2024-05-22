@@ -5,11 +5,19 @@
 [node name="Main" type="Node"]
 script = ExtResource("1_a8e7x")
 
-[node name="Button" type="Button" parent="."]
+[node name="DealButton" type="Button" parent="."]
 offset_left = 683.0
 offset_top = 244.0
 offset_right = 798.0
 offset_bottom = 386.0
 text = "Deal"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="ShuffleButton" type="Button" parent="."]
+offset_left = 838.0
+offset_top = 246.0
+offset_right = 960.0
+offset_bottom = 388.0
+text = "Shuffle"
+
+[connection signal="pressed" from="DealButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ShuffleButton" to="." method="_on_shuffle_button_pressed"]

@@ -19,3 +19,7 @@ func _on_button_pressed():
 	cards.append(newCard)
 	add_child(newCard)
 	newCard.set_position(Vector2(120 * (cards.size() - 1), 0))
+
+
+func _on_shuffle_button_pressed():
+	deck.shuffle()

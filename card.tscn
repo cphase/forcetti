@@ -9,3 +9,5 @@ script = ExtResource("1_i1r31")
 offset_right = 117.0
 offset_bottom = 169.0
 toggle_mode = true
+
+[connection signal="toggled" from="CardButton" to="." method="_on_card_button_toggled"]

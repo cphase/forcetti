@@ -1,10 +1,10 @@
 class_name Enums
 
 enum Suits {
-		SPADES,
-		HEARTS,
-		DIAMONDS,
-		CLUBS
+	SPADES,
+	HEARTS,
+	DIAMONDS,
+	CLUBS
 }
 
 enum Ranks {

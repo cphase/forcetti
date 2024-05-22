@@ -23,4 +23,4 @@ func deal():
 	return cards.pop_front()
 		
 func shuffle():
-	cards.shuffle
+	cards.shuffle()
