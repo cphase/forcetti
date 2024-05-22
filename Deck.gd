@@ -11,7 +11,7 @@ func _process(delta):
 	pass
 
 func fillDefault():
-	for rank in range(1,13):
+	for rank in range(1,14):
 		for suit in range(0,5):
 			var card = load("res://card.tscn").instantiate()
 			card.suit = suit
