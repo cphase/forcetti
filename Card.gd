@@ -18,4 +18,4 @@ func _process(delta):
 	pass
 
 func updateCard():
-	get_node("CardPanel/CardLabel").text = str(Enums.Ranks.find_key(rank), "\nof\n", Enums.Suits.keys()[suit])
+	get_node("CardButton").text = str(Enums.Ranks.find_key(rank), "\nof\n", Enums.Suits.keys()[suit])
