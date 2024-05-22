@@ -1,3 +1,4 @@
+class_name Deck
 extends Node
 
 var cards = []
@@ -12,16 +13,14 @@ func _process(delta):
 
 func fillDefault():
 	for rank in range(1,14):
-		for suit in range(0,5):
+		for suit in range(0,4):
 			var card = load("res://card.tscn").instantiate()
 			card.suit = suit
 			card.rank = rank
-			cards.add(card)
+			cards.append(card)
 			
-func deal(n):
-	var returnCards = []
-	for i in range (0, n):
-		returnCards.add(cards.pop_front())
+func deal():
+	return cards.pop_front()
 		
 func shuffle():
 	cards.shuffle
