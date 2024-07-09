@@ -1,6 +1,6 @@
 class_name Card
 
-extends Node2D
+extends Button
 
 @export var rank: Enums.Ranks = Enums.Ranks.ACE
 @export var suit: Enums.Suits = Enums.Suits.SPADES
@@ -18,10 +18,10 @@ func _process(delta):
 	pass
 
 func updateCard():
-	get_node("CardButton").text = str(Enums.Ranks.find_key(rank), "\nof\n", Enums.Suits.keys()[suit])
+	text = str(Enums.Ranks.find_key(rank), "\nof\n", Enums.Suits.keys()[suit])
 
 func _on_card_button_toggled(toggled_on):
 	if toggled_on:
-		set_position(get_position() + Vector2(0,40))
+		set_position(get_position() + Vector2(0,-20))
 	else:
-		set_position(get_position() + Vector2(0,-40))
+		set_position(get_position() + Vector2(0,20))

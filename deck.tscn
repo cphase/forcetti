@@ -1,6 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://djc4q0c10kprk"]
+[gd_scene load_steps=5 format=3 uid="uid://djc4q0c10kprk"]
 
+[ext_resource type="Texture2D" uid="uid://bun3yhpbvgdld" path="res://aiCardBack.png" id="1_c0utq"]
 [ext_resource type="Script" path="res://Deck.gd" id="1_iy6yj"]
+[ext_resource type="Texture2D" uid="uid://c7caehhbx0hba" path="res://aiShuffleDeck.png" id="2_8ihu2"]
 
-[node name="Deck" type="Node"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_p2t3k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_c0utq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8ihu2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="Deck" type="AnimatedSprite2D"]
+position = Vector2(609, 277)
+scale = Vector2(0.145389, 0.148936)
+sprite_frames = SubResource("SpriteFrames_p2t3k")
 script = ExtResource("1_iy6yj")

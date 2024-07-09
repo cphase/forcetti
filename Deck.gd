@@ -1,5 +1,5 @@
 class_name Deck
-extends Node
+extends AnimatedSprite2D
 
 var cards = []
 
@@ -9,6 +9,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	pass
+	
+func _physics_process(delta):
 	pass
 
 func fillDefault():
@@ -20,7 +23,11 @@ func fillDefault():
 			cards.append(card)
 			
 func deal():
-	return cards.pop_front()
+	return cards.pop_back()
+	
+func returnCard(card):
+	cards.append(card)
 		
 func shuffle():
 	cards.shuffle()
+	play()

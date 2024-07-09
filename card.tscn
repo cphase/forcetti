@@ -2,12 +2,10 @@
 
 [ext_resource type="Script" path="res://Card.gd" id="1_i1r31"]
 
-[node name="Card" type="Node2D"]
+[node name="Card" type="Button"]
+offset_right = 100.0
+offset_bottom = 140.0
+toggle_mode = true
 script = ExtResource("1_i1r31")
 
-[node name="CardButton" type="Button" parent="."]
-offset_right = 117.0
-offset_bottom = 169.0
-toggle_mode = true
-
-[connection signal="toggled" from="CardButton" to="." method="_on_card_button_toggled"]
+[connection signal="toggled" from="." to="." method="_on_card_button_toggled"]

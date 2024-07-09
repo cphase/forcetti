@@ -1,8 +1,8 @@
 class_name Hand
 extends Node2D
 
-var deck: Deck
 var cards = []
+var limit = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,3 +12,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+func addCard(card):
+	if (cards.size() >= limit): return false
+	cards.append(card)
+	add_child(card)
+	card.set_position(Vector2((card.size.x + 4) * (cards.size() - 1), get_viewport().size.y - card.size.y))
+	return true;

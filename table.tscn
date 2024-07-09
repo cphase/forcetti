@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bofn170axw6wg"]
+
+[ext_resource type="PackedScene" uid="uid://djc4q0c10kprk" path="res://deck.tscn" id="1_07gxq"]
+[ext_resource type="Script" path="res://table.gd" id="1_fj8n0"]
+[ext_resource type="PackedScene" uid="uid://dc1hteaqjpuvv" path="res://player.tscn" id="2_amu2q"]
+
+[node name="Table" type="Node2D"]
+script = ExtResource("1_fj8n0")
+
+[node name="Deck" parent="." instance=ExtResource("1_07gxq")]
+position = Vector2(489, 265)
+
+[node name="Player" parent="." instance=ExtResource("2_amu2q")]
+
+[node name="DealButton" type="Button" parent="."]
+offset_left = 683.0
+offset_top = 244.0
+offset_right = 798.0
+offset_bottom = 386.0
+text = "Deal"
+
+[node name="ShuffleButton" type="Button" parent="."]
+offset_left = 838.0
+offset_top = 246.0
+offset_right = 960.0
+offset_bottom = 388.0
+text = "Shuffle"
+
+[connection signal="pressed" from="DealButton" to="." method="_on_deal_button_pressed"]
+[connection signal="pressed" from="ShuffleButton" to="." method="_on_shuffle_button_pressed"]

@@ -1,13 +1,18 @@
-class_name Main
-extends Node
+class_name Player
 
-#var deck: Deck = load("res://deck.tscn").instantiate()
-var cards = []
+extends Node2D
+
+var hand;
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	hand = get_node("Hand")
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+func addCard(card):
+	return hand.addCard(card)
