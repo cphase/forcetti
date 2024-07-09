@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://duuiaeovlnjkv"]
+
+[node name="HeartsIcon" type="Polygon2D"]
+position = Vector2(6, 5)
+color = Color(1, 0, 0, 1)
+offset = Vector2(-6, -5)
+polygon = PackedVector2Array(6, 11, 0, 3, 3, 0, 6, 3, 9, 0, 12, 3)

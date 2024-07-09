@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cilekch4gi1up"]
+
+[node name="DiamondsIcon" type="Polygon2D"]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(6, 0, 0, 4, 6, 11, 12, 4)

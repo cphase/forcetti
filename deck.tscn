@@ -1,17 +1,17 @@
 [gd_scene load_steps=5 format=3 uid="uid://djc4q0c10kprk"]
 
-[ext_resource type="Texture2D" uid="uid://bun3yhpbvgdld" path="res://aiCardBack.png" id="1_c0utq"]
 [ext_resource type="Script" path="res://Deck.gd" id="1_iy6yj"]
-[ext_resource type="Texture2D" uid="uid://c7caehhbx0hba" path="res://aiShuffleDeck.png" id="2_8ihu2"]
+[ext_resource type="Texture2D" uid="uid://bun3yhpbvgdld" path="res://img/aiCardBack.png" id="1_n1gyg"]
+[ext_resource type="Texture2D" uid="uid://c7caehhbx0hba" path="res://img/aiShuffleDeck.png" id="2_1wjl3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p2t3k"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_c0utq")
+"texture": ExtResource("1_n1gyg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_8ihu2")
+"texture": ExtResource("2_1wjl3")
 }],
 "loop": true,
 "name": &"default",

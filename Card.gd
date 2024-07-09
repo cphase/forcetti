@@ -19,6 +19,14 @@ func _process(delta):
 
 func updateCard():
 	text = str(Enums.Ranks.find_key(rank), "\nof\n", Enums.Suits.keys()[suit])
+	var icon
+	if (suit == Enums.Suits.HEARTS): icon = load("res://icons/hearts_icon.tscn").instantiate()
+	if (suit == Enums.Suits.SPADES): icon = load("res://icons/spades_icon.tscn").instantiate()
+	if (suit == Enums.Suits.CLUBS): icon = load("res://icons/clubs_icon.tscn").instantiate()
+	if (suit == Enums.Suits.DIAMONDS): icon = load("res://icons/diamonds_icon.tscn").instantiate()
+	icon.scale = Vector2(2,2)
+	icon.position = Vector2(5,5)
+	add_child(icon)
 
 func _on_card_button_toggled(toggled_on):
 	if toggled_on:

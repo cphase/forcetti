@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://nonc5phkwglr"]
+
+[node name="ClubsIcon" type="Polygon2D"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(6, 0, 3, 2, 5, 5, 2, 3, 0, 6, 2, 9, 5, 7, 5, 8.39964, 4, 11, 8, 11, 7, 8.39964, 7, 7, 10, 9, 12, 6, 10, 3, 7, 5, 7, 5, 9, 2)

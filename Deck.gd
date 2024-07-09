@@ -2,6 +2,7 @@ class_name Deck
 extends AnimatedSprite2D
 
 var cards = []
+var timer = 0;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,7 +13,7 @@ func _process(delta):
 	pass
 	
 func _physics_process(delta):
-	pass
+	updateTimer()
 
 func fillDefault():
 	for rank in range(1,14):
@@ -30,4 +31,11 @@ func returnCard(card):
 		
 func shuffle():
 	cards.shuffle()
+	timer = 30
 	play()
+
+func updateTimer():
+	if timer > 0:
+		timer -= 1
+	else:
+		stop()
